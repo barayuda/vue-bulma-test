@@ -5,7 +5,7 @@
         <img :src="logo" width="112" height="28" />
       </a>
 
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-burger-menu" @click="showMenu = !showMenu">
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-burger-menu" @click="showMenu = !showMenu" :class="{ 'is-active': showMenu }">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -14,6 +14,8 @@
 
     <div id="navbar-burger-menu" class="navbar-menu" :class="{ 'is-active': showMenu }">
       <div class="navbar-end">
+        <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link>
         <a class="navbar-item" :href="logoLink">
           Beranda
         </a>

@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Navbar logo="https://bulma.io/images/bulma-logo.png" logoLink="/" />
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -7,6 +8,15 @@
     <router-view />
   </div>
 </template>
+
+<script>
+import Navbar from "@/components/Navbar.vue";
+export default {
+  components: {
+    Navbar
+  }
+};
+</script>
 
 <style lang="scss">
 #app {

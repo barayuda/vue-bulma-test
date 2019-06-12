@@ -1,9 +1,20 @@
 module.exports = {
-  assetsDir: 'assets',
+  css: {
+    loaderOptions: {
+      sass: {
+        data: `
+          @import "@/assets/styles/main.scss";
+        `
+      }
+    }
+  },
+
+  assetsDir: "assets",
 
   pwa: {
-    name: 'WEB IMPLEMENTATION',
-    themeColor: '#0E89E3',
-    msTileColor: '#0E89E3'
+    name: "WEB IMPLEMENTATION",
+    themeColor: "#108ee9",
+    msTileColor: "#108ee9"
   }
-}
+
+};

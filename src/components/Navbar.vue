@@ -1,44 +1,36 @@
 <template>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav class="navbar is-fixed-top" :class="{'has-shadow': scrollPosition > 60}" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" :href="logoLink">
-        <img :src="logo" width="112" height="28" />
-      </a>
-
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-burger-menu" @click="showMenu = !showMenu" :class="{ 'is-active': showMenu }">
+      <router-link class="navbar-item" to="/">
+        <img src="../assets/images/logo-dana-with-typography@2x.png" />
+      </router-link>
+      <a
+        role="button"
+        class="navbar-burger burger"
+        aria-label="menu"
+        aria-expanded="false"
+        data-target="navbar-burger-menu"
+        @click="showMenu = !showMenu"
+        :class="{ 'is-active': showMenu }"
+      >
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </a>
     </div>
 
-    <div id="navbar-burger-menu" class="navbar-menu" :class="{ 'is-active': showMenu }">
+    <div
+      id="navbar-burger-menu"
+      class="navbar-menu"
+      :class="{ 'is-active': showMenu }"
+    >
       <div class="navbar-end">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link>
-        <a class="navbar-item" :href="logoLink">
-          Beranda
-        </a>
+        <router-link class="navbar-item" to="/">Beranda</router-link>
 
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            Dokumentasi
-          </a>
-
+          <router-link class="navbar-link" to="#">Dokumentasi</router-link>
           <div class="navbar-dropdown">
-            <a class="navbar-item">
-              API
-            </a>
-          </div>
-        </div>
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-primary">
-              <strong>Kontak</strong>
-            </a>
-            <a class="button is-light">
-              Karir
-            </a>
+            <router-link class="navbar-item" to="/api">API</router-link>
           </div>
         </div>
       </div>
@@ -49,13 +41,18 @@
 <script>
 export default {
   name: "Navbar",
-  props: {
-    logo: String,
-    logoLink: String
-  },
   data() {
     return {
-      showMenu: false
+      showMenu: false,
+      scrollPosition: null
+    };
+  },
+  mounted() {
+    window.addEventListener("scroll", this.updateScroll);
+  },
+  methods: {
+    updateScroll() {
+      this.scrollPosition = window.scrollY;
     }
   }
 };

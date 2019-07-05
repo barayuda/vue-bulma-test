@@ -6,10 +6,10 @@
           <div class="columns is-vcentered">
             <div class="column is-3 is-offset-1 landing-caption">
               <h1 class="title is-3 has-text-weight-light has-text-left is-spaced">
-                Lorem Ipsum
+                {{ title }}
               </h1>
               <p class="subtitle is-6 has-text-left is-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec turpis convallis, rutrum arcu eleifend, efficitur leo. Quisque finibus nibh urna, vitae tincidunt tortor imperdiet sed. Morbi arcu sem, luctus nec congue ut, egestas ac orci. Donec ac vestibulum odio, nec imperdiet tellus.
+                {{ description }}
               </p>
             </div>
             <div class="column is-7 is-offset-1">
@@ -78,7 +78,7 @@
                   <img src="../assets/images/blue@2x.png" alt="icon" width="64" height="64" />
                 </div>
                 <div class="package-title">
-                  <h2>Lorem Ipsum</h2>
+                  <h2 class="has-text-weight-bold">Lorem Ipsum</h2>
                 </div>
                 <div class="package-description">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec turpis convallis, rutrum arcu eleifend, efficitur leo. Quisque finibus nibh urna, vitae tincidunt tortor imperdiet sed.</p>
@@ -91,3 +91,26 @@
     </section>
   </div>
 </template>
+
+<script>
+import axios from 'axios';
+export default {
+  data () {
+    return {
+      title: null,
+      description: null
+    }
+  },
+  mounted () {
+    axios
+      .get('https://swapi.co/api/films/1/?format=json')
+      .then((response) => {
+        this.title = response.data.title;
+        this.description = response.data.opening_crawl;
+        console.log('DATA:',response);
+      }).catch((error) => {
+        console.log(error);
+      });
+  }
+};
+</script>

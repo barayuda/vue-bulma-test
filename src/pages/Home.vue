@@ -1,8 +1,10 @@
 <template>
-  <section class="section home">
-    <img alt="Vue logo" src="../assets/images/logo.png" />
+  <div class="home">
     <Main msg="Welcome to Your Vue.js App" />
-  </section>
+    <section class="section photo-grid">
+      Photo Grid here...
+    </section>
+  </div>
 </template>
 
 <script>

@@ -68,8 +68,9 @@ export default {
       .then((response) => {
         this.title = response.data.title;
         this.description = response.data.opening_crawl;
-        console.log('[DATA]:',response);
       }).catch((error) => {
+        this.title = "Lorem Ipsum";
+        this.description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec turpis convallis, rutrum arcu eleifend, efficitur leo. Quisque finibus nibh urna, vitae tincidunt tortor imperdiet sed. Morbi arcu sem, luctus nec congue ut, egestas ac orci. Donec ac vestibulum odio, nec imperdiet tellus.";
         console.log('[ERROR]:',error);
       });
   }

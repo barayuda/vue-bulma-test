@@ -61,8 +61,8 @@ import axios from 'axios';
 export default {
   data () {
     return {
-      title: null,
-      description: null
+      title: "Lorem Ipsum",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec turpis convallis, rutrum arcu eleifend, efficitur leo. Quisque finibus nibh urna, vitae tincidunt tortor imperdiet sed. Morbi arcu sem, luctus nec congue ut, egestas ac orci. Donec ac vestibulum odio, nec imperdiet tellus."
     }
   },
   mounted () {
@@ -72,8 +72,6 @@ export default {
         this.title = response.data.title;
         this.description = response.data.opening_crawl;
       }).catch((error) => {
-        this.title = "Lorem Ipsum";
-        this.description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec turpis convallis, rutrum arcu eleifend, efficitur leo. Quisque finibus nibh urna, vitae tincidunt tortor imperdiet sed. Morbi arcu sem, luctus nec congue ut, egestas ac orci. Donec ac vestibulum odio, nec imperdiet tellus.";
         console.log('[ERROR]:',error);
       });
   }

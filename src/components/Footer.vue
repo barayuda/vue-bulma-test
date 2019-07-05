@@ -1,16 +1,37 @@
 <template>
   <footer class="footer has-text-white">
     <div class="container">
-      <div class="content has-text-centered">
-        <p>
-          Mobile App built
-          with
-          <span class="icon has-text-danger">
-            <i class="fas fa-heart"></i>
-          </span>
-          by <a href="https://petehouston.com">Pete Houston</a>
-          &copy; 2019.
-        </p>
+      <div class="columns">
+        <div class="column has-text-left has-text-centered-mobile">
+          <div class="footer-column">
+            <div class="footer-header">
+              <h3 class="is-uppercase">Follow Us</h3>
+            </div>
+            <nav class="level is-mobile icons-centered-mobile">
+              <div class="level-left">
+                <a class="level-item is-size-3" href="https://fb.com/barayuda.web.id">
+                  <span class="icon"><i class="fa fa-facebook-square"></i></span>
+                </a>
+                <a class="level-item is-size-3" href="https://twitter.com/barayuda">
+                  <span class="icon"><i class="fa fa-twitter"></i></span>
+                </a>
+                <a class="level-item is-size-3" href="https://instagram.com/barayudagautama">
+                  <span class="icon"><i class="fa fa-instagram"></i></span>
+                </a>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="column is-four-fifths has-text-right has-text-centered-mobile is-size-7-mobile">
+          <div class="footer-menu is-uppercase">
+            <router-link class="footer-item" to="/"><span class="text">Home</span></router-link>
+            <router-link class="footer-item" to="/tentang"><span class="text">About Us</span></router-link>
+            <router-link class="footer-item" to="/kontak"><span class="text">Contact Us</span></router-link>
+          </div>
+          <div class="footer-copyright">
+            <p>&copy; 2017 DANA - PT. Espay Debit Indonesia Koe. All Rights Reserved.</p>
+          </div>
+        </div>
       </div>
     </div>
   </footer>

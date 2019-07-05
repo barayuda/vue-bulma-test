@@ -14,12 +14,15 @@ export default new Router({
       component: Home
     },
     {
-      path: "/about",
+      path: "/tentang",
       name: "about",
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      // lazy-loaded applied
       component: () => import("./pages/About.vue")
+    },
+    {
+      path: "/kontak",
+      name: "contact",
+      component: () => import("./pages/Contact.vue")
     }
   ]
 });

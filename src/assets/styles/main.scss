@@ -1,4 +1,10 @@
 @charset "utf-8";
+// bulma utility
+@import '~bulma/sass/utilities/mixins';
 // custom variables
 @import 'variables';
+@import 'icons';
+@import 'margin-padding';
+@import 'custom';
+
 @import '~bulma';

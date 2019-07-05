@@ -1,0 +1,84 @@
+// HEAD
+.section {
+  &.is-padding-nav-less {
+    padding: 1.65rem !important;
+  }
+}
+// BODY
+
+//======= ABOUT PAGE =======
+.about {
+
+  .about-title {
+    color: rgba(102, 102, 102, 0.9);
+    font-size: 48px;
+  }
+
+  .packages {
+    .package-icon {
+
+    }
+    .package-title {
+      color: rgba(68, 68, 68, 0.9);
+      font-size: 24px;
+    }
+    .package-description {
+      color: rgba(102, 102, 102, 0.9);
+      font-size: 14px;
+    }
+  }
+
+}
+
+.contact {
+  .contact-number {
+    color: $primary;
+  }
+
+  .ordered-mobile {
+    @include mobile {
+      display: flex;
+      flex-flow: column;
+      .fl-1 {
+        order: 1;
+      }
+      .fl-2 {
+        order: 2;
+      }
+    }
+  }
+}
+
+// FOOTER
+.level {
+  &.icons-centered-mobile {
+    margin-top: 10px;
+    @include mobile {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .level-item {
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+.footer-menu {
+  .footer-item {
+    &:hover {
+      color: $white;
+      cursor: pointer;
+    }
+    &::after {
+      content: '\00a0\00a0|\00a0\00a0';
+    }
+    &:last-child {
+      &::after {
+        content: '';
+      }
+    }
+  }
+}

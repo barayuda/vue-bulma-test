@@ -33,46 +33,7 @@
       <div class="container">
         <div class="body-page">
           <div class="columns packages">
-            <div class="column">
-              <div class="package">
-                <div class="package-icon">
-                  <img src="../assets/images/blue@2x.png" alt="icon" width="64" height="64" />
-                </div>
-                <div class="package-title">
-                  <h2 class="has-text-weight-bold">Lorem Ipsum</h2>
-                </div>
-                <div class="package-description">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec turpis convallis, rutrum arcu eleifend, efficitur leo. Quisque finibus nibh urna, vitae tincidunt tortor imperdiet sed.</p>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="package">
-                <div class="package-icon">
-                  <img src="../assets/images/blue@2x.png" alt="icon" width="64" height="64" />
-                </div>
-                <div class="package-title">
-                  <h2 class="has-text-weight-bold">Lorem Ipsum</h2>
-                </div>
-                <div class="package-description">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec turpis convallis, rutrum arcu eleifend, efficitur leo. Quisque finibus nibh urna, vitae tincidunt tortor imperdiet sed.</p>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="package">
-                <div class="package-icon">
-                  <img src="../assets/images/blue@2x.png" alt="icon" width="64" height="64" />
-                </div>
-                <div class="package-title">
-                  <h2 class="has-text-weight-bold">Lorem Ipsum</h2>
-                </div>
-                <div class="package-description">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec turpis convallis, rutrum arcu eleifend, efficitur leo. Quisque finibus nibh urna, vitae tincidunt tortor imperdiet sed.</p>
-                </div>
-              </div>
-            </div>
-            <div class="column">
+            <div class="column" v-for="n in 4" v-bind:key="n">
               <div class="package">
                 <div class="package-icon">
                   <img src="../assets/images/blue@2x.png" alt="icon" width="64" height="64" />

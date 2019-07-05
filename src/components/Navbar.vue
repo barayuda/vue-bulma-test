@@ -2,7 +2,7 @@
   <section class="section navigation is-padding-nav-less">
     <nav class="navbar is-fixed-top" :class="{'has-shadow': scrollPosition > 60}" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <router-link class="navbar-item" to="/">
+        <router-link class="navbar-item" to="/home">
           <img src="../assets/images/logo-dana-with-typography@2x.png" />
         </router-link>
         <a

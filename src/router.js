@@ -6,7 +6,7 @@ Vue.use(Router);
 
 export default new Router({
   mode: "history",
-  base: process.env.BASE_URL,
+  base: "/webtask",
   routes: [
     {
       path: "/",
@@ -14,13 +14,13 @@ export default new Router({
       component: Home
     },
     {
-      path: "/tentang",
+      path: "/about",
       name: "about",
       // lazy-loaded applied
       component: () => import("./pages/About.vue")
     },
     {
-      path: "/kontak",
+      path: "/contact",
       name: "contact",
       component: () => import("./pages/Contact.vue")
     }

@@ -26,8 +26,8 @@
         :class="{ 'is-active': showMenu }"
       >
         <div class="navbar-end">
-          <router-link class="navbar-item" to="/tentang">About</router-link>
-          <router-link class="navbar-item" to="/kontak">Contact Us</router-link>
+          <router-link class="navbar-item" to="/about">About</router-link>
+          <router-link class="navbar-item" to="/contact">Contact Us</router-link>
           <!-- <div class="navbar-item has-dropdown is-hoverable">
             <router-link class="navbar-link" to="/kontak">Contact Us</router-link>
             <div class="navbar-dropdown">

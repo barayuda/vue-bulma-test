@@ -107,9 +107,9 @@ export default {
       .then((response) => {
         this.title = response.data.title;
         this.description = response.data.opening_crawl;
-        console.log('DATA:',response);
+        console.log('[DATA]:',response);
       }).catch((error) => {
-        console.log(error);
+        console.log('[ERROR]:',error);
       });
   }
 };

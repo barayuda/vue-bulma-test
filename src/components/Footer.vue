@@ -25,8 +25,8 @@
         <div class="column is-four-fifths has-text-right has-text-centered-mobile is-size-7-mobile">
           <div class="footer-menu is-uppercase">
             <router-link class="footer-item" to="/"><span class="text">Home</span></router-link>
-            <router-link class="footer-item" to="/tentang"><span class="text">About Us</span></router-link>
-            <router-link class="footer-item" to="/kontak"><span class="text">Contact Us</span></router-link>
+            <router-link class="footer-item" to="/about"><span class="text">About Us</span></router-link>
+            <router-link class="footer-item" to="/contact"><span class="text">Contact Us</span></router-link>
           </div>
           <div class="footer-copyright">
             <p>&copy; 2017 DANA - PT. Espay Debit Indonesia Koe. All Rights Reserved.</p>

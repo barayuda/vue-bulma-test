@@ -15,6 +15,8 @@ module.exports = {
     name: "WEB IMPLEMENTATION",
     themeColor: "#108ee9",
     msTileColor: "#108ee9"
-  }
+  },
+
+  publicPath: '/webtask/'
 
 };

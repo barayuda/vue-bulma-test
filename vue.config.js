@@ -17,6 +17,6 @@ module.exports = {
     msTileColor: "#108ee9"
   },
 
-  publicPath: '/webtask/'
+  publicPath: '/'
 
 };

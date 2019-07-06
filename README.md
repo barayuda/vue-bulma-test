@@ -1,8 +1,11 @@
-# vue-bulma-test
+# webtask
 
 An experimental project, to implementation UI design.
 
-Demo: vuebulmaui.transliterasi.com
+Demo: 
+- https://vue-webtask.netlify.com/
+- https://barayuda.github.io/webtask/
+
 
 ## Project setup
 

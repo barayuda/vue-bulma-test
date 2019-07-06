@@ -32,38 +32,11 @@
 </template>
 
 <script>
-import axios from 'axios';
-const apiBasedUrl = "https://jsonplaceholder.typicode.com/photos";
-const apiKey = "";
 
 export default {
   name: "Main",
   props: {
     msg: String
-  },
-  data() {
-    return {
-      imgId: null,
-      imgTitle: null,
-      imgUrl: null,
-      imgThumbUrl: null
-
-    }
-  },
-  mounted () {
-    axios
-      .get('https://swapi.co/api/films/1/?format=json')
-      .then((response) => {
-        this.imgId = response.data.id;
-        this.imgTitle = response.data.title;
-        this.imgUrl = response.data.url;
-        this.imgThumbUrl = response.data.thumbnailUrl;
-      }).catch((error) => {
-        console.log('[ERROR]:',error);
-      });
-  },
-  methods: {
-
   }
 };
 </script>

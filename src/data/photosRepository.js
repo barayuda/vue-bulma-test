@@ -1,15 +1,14 @@
-import dataRepository from "./dataRepository";
+import { PhotosAxios } from "./dataRepository";
 
 const resource = "photos";
 
 export default {
   get() {
-    return dataRepository.get(`${resource}`);
+    return PhotosAxios.get(`${resource}`);
   },
 
   getPhoto(photoId) {
-    return dataRepository.get(`${resource}/${photoId}`);
+    return PhotosAxios.get(`${resource}/${photoId}`);
   }
 
-  
 }

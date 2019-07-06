@@ -6,10 +6,10 @@
           <div class="columns is-vcentered">
             <div class="column is-3 is-offset-1 landing-caption">
               <h1 class="title is-3 has-text-weight-light has-text-left has-text-centered-mobile is-spaced">
-                {{ title }}
+                {{ about.title }}
               </h1>
               <p class="subtitle is-6 has-text-left is-muted is-hidden-mobile">
-                {{ description }}
+                {{ about.opening_crawl }}
               </p>
             </div>
             <div class="column is-7 is-offset-1">
@@ -17,7 +17,7 @@
                 <img src="../assets/images/rainy@3x.png" alt="Description" />
               </figure>
               <p class="subtitle is-6 has-text-centered-mobile m-t-xl is-muted is-hidden-desktop is-hidden-tablet">
-                {{ description }}
+                {{ about.opening_crawl }}
               </p>
             </div>
           </div>
@@ -57,23 +57,32 @@
 </template>
 
 <script>
-import axios from 'axios';
+import { DataFactory } from "@/data/dataFactory";
+
+const AboutRepository = DataFactory.get('about');
+
 export default {
   data () {
     return {
-      title: "Lorem Ipsum",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec turpis convallis, rutrum arcu eleifend, efficitur leo. Quisque finibus nibh urna, vitae tincidunt tortor imperdiet sed. Morbi arcu sem, luctus nec congue ut, egestas ac orci. Donec ac vestibulum odio, nec imperdiet tellus."
+      about: {
+        title: "Lorem Ipsum",
+        opening_crawl: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec turpis convallis, rutrum arcu eleifend, efficitur leo. Quisque finibus nibh urna, vitae tincidunt tortor imperdiet sed. Morbi arcu sem, luctus nec congue ut, egestas ac orci. Donec ac vestibulum odio, nec imperdiet tellus."
+      }
     }
   },
-  mounted () {
-    axios
-      .get('https://swapi.co/api/films/1/?format=json')
-      .then((response) => {
-        this.title = response.data.title;
-        this.description = response.data.opening_crawl;
-      }).catch((error) => {
-        console.log('[ERROR]:',error);
-      });
+  created() {
+    this.fetch();
+  },
+  methods: {
+    async fetch() {
+      const { data } = await AboutRepository.get();
+      this.about = data;
+    }
+  },
+  computed: {
+    computedPhotos() {
+      return this.about;
+    }
   }
 };
 </script>

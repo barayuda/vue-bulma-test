@@ -1,8 +1,14 @@
 import axios from "axios";
 
 const baseDomain = "https://jsonplaceholder.typicode.com/";
-const baseURL = `${baseDomain}`;
+const photosBaseURL = `${baseDomain}`;
 
-export default axios.create({
-    baseURL
+const aboutBaseURL = "https://swapi.co/api/films/1/?format=json";
+
+export const PhotosAxios = axios.create({
+    baseURL: photosBaseURL
+});
+
+export const AboutAxios = axios.create({
+    baseURL: aboutBaseURL
 });

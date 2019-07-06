@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Main title="Welcome to Your Vue.js App" :subtitle="subtitle" />
+    <Main title="This is Static Title" :subtitle="subtitle" />
     <section v-if="isLoading" class="section">Fetching photos...</section>
     <photos-list v-if="!isLoading" :photos="computedPhotos">
       <template slot-scope="photos">

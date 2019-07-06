@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Main msg="Welcome to Your Vue.js App" />
+    <Main title="Welcome to Your Vue.js App" :subtitle="subtitle" />
     <section v-if="isLoading" class="section">Fetching photos...</section>
     <photos-list v-if="!isLoading" :photos="computedPhotos">
       <template slot-scope="photos">
@@ -32,6 +32,7 @@ import PhotosList from "@/components/PhotosList.vue";
 import { DataFactory } from "@/data/dataFactory";
 
 const PhotosRepository = DataFactory.get('photos');
+const HeroRepository = DataFactory.get('subtitle');
 
 export default {
   name: "home",
@@ -42,6 +43,7 @@ export default {
   data() {
     return {
       isLoading: false,
+      subtitle: "Fetching random joke...",
       photos: []
     };
   },
@@ -52,6 +54,8 @@ export default {
     async fetch() {
       this.isLoading = true;
       const { data } = await PhotosRepository.get();
+      const hero = await HeroRepository.get();
+      this.subtitle = hero.data.value;
       this.isLoading = false;
       this.photos = data;
     }

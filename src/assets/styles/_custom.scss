@@ -50,34 +50,36 @@
 }
 
 // FOOTER
-.level {
-  &.icons-centered-mobile {
-    margin-top: 10px;
+footer {
+
+  .social-icons {
+
     @include mobile {
       justify-content: center;
       align-items: center;
     }
+  
+    .icon-item {
+      &:hover {
+        color: $blue;
+      }
+    }
+    
   }
-
-  .level-item {
-    &:hover {
-      color: $blue;
-    }
-  }
-}
-
-.footer-menu {
-  .footer-item {
-    &:hover {
-      color: $white;
-      cursor: pointer;
-    }
-    &::after {
-      content: '\00a0\00a0|\00a0\00a0';
-    }
-    &:last-child {
+  
+  .footer-menu {
+    .footer-item {
+      &:hover {
+        color: $white;
+        cursor: pointer;
+      }
       &::after {
-        content: '';
+        content: '\00a0\00a0|\00a0\00a0';
+      }
+      &:last-child {
+        &::after {
+          content: '';
+        }
       }
     }
   }

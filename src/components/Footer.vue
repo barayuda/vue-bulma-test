@@ -7,22 +7,20 @@
             <div class="footer-header">
               <h3 class="is-uppercase">Follow Us</h3>
             </div>
-            <nav class="level is-mobile icons-centered-mobile">
-              <div class="level-left">
-                <a class="level-item is-size-3" href="https://fb.com/barayuda.web.id">
-                  <span class="icon"><i class="fa fa-facebook-square"></i></span>
-                </a>
-                <a class="level-item is-size-3" href="https://twitter.com/barayuda">
-                  <span class="icon"><i class="fa fa-twitter"></i></span>
-                </a>
-                <a class="level-item is-size-3" href="https://instagram.com/barayudagautama">
-                  <span class="icon"><i class="fa fa-instagram"></i></span>
-                </a>
-              </div>
+            <nav class="social-icons is-mobile m-t-xs">
+              <a class="icon-item m-r-lg is-size-2" href="https://fb.com/barayuda.web.id">
+                <span class="icon is-medium"><i class="fa fa-facebook-square"></i></span>
+              </a>
+              <a class="icon-item m-r-lg is-size-2" href="https://instagram.com/barayudagautama">
+                <span class="icon is-medium"><i class="fa fa-instagram"></i></span>
+              </a>
+              <a class="icon-item is-size-2" href="https://twitter.com/barayuda">
+                <span class="icon is-medium"><i class="fa fa-twitter"></i></span>
+              </a>
             </nav>
           </div>
         </div>
-        <div class="column is-four-fifths has-text-right has-text-centered-mobile is-size-7-mobile">
+        <div class="column is-three-quarters has-text-right has-text-centered-mobile is-size-7-mobile">
           <div class="footer-menu is-uppercase">
             <router-link class="footer-item" to="/home"><span class="text">Home</span></router-link>
             <router-link class="footer-item" to="/about"><span class="text">About Us</span></router-link>

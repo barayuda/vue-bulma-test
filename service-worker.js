@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.0bdd6635108a23390645893f68c1f4f3.js"
+  "precache-manifest.8dbefc6fa795b4be7c4a5f6ffe6e4281.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "vue-bulma-test"});
